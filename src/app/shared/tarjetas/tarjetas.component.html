@@ -1,0 +1,13 @@
+<div class="card-columns mt-5">
+    <div (click)="verArtista(item)" *ngFor = "let item of items" class="card puntero" style="width: 18rem;">
+        <img [src]="item.images | noimage" class="card-img-top">
+        <div class="card-body">
+        <h5 class="card-title">{{item.name}}</h5>
+        <p class="card-text"  *ngIf="item.artists">
+            <span *ngFor = "let artist of item.artists" class="badge badge-secondary">
+                {{artist.name}}
+            </span>
+        </p>
+        </div>
+    </div>
+</div>
